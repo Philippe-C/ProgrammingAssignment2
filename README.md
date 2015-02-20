@@ -1,28 +1,36 @@
-############################################## OUPUT OF THE ASSIGNMENT ##################################
-######### THIS IS WHAT YOU SHOULD OBSERVE AFTER RUNNING CacheMatrixAssignment2.R AND USING THE VARIOUS FUNCTIONS! 
-> A <-makeCacheMatrix( matrix(c(1,2,3,4), nrow = 2, ncol = 2) ) # CREATES A SIMPLE ORDER 2 MATRIX
-> summary(A)
-             Length Class  Mode    
-setMatrix    1      -none- function
-getMatrix    1      -none- function
-cacheInverse 1      -none- function
-getInverse   1      -none- function
-> A$getMatrix()
-     [,1] [,2]
-[1,]    1    3
-[2,]    2    4
-> cacheSolve(A)
-     [,1] [,2]
-[1,]   -2  1.5
-[2,]    1 -0.5
-> cacheSolve(A)
-getting cached data
-     [,1] [,2]
-[1,]   -2  1.5
-[2,]    1 -0.5
+# OUPUT OF THE ASSIGNMENT 
+## THIS IS WHAT YOU SHOULD OBSERVE AFTER RUNNING CacheMatrixAssignment2.R AND USING THE VARIOUS FUNCTIONS! 
 
-#######################################################################
-########### REMARKS OF THE PROFESSOR FOR THE ASSIGNMENT   ##############
+	
+	# create a *square* matrix (necessary as `solve` only works with square matrices)
+	A <- makeCacheMatrix( matrix(c(1,2,3,4), nrow = 2, ncol = 2) );
+
+	summary(A);
+	#>              Length Class  Mode    
+	#> setMatrix    1      -none- function
+	#> getMatrix    1      -none- function
+	#> cacheInverse 1      -none- function
+	#> getInverse   1      -none- function
+
+	A$getMatrix();
+	#>      [,1] [,2]
+	#> [1,]    1   3
+	#> [2,]    2   4
+
+	cacheSolve(a)
+	#>     [,1] [,2]
+	#> [1,] -2  1.5
+	#> [2,]  1 -0.5
+
+	# Note that if we run the function another time, we get the cached value as expected
+	cacheSolve(a)
+	#> getting cached data
+	#>     [,1] [,2]
+	#> [1,] -2  1.5
+	#> [2,]  1 -0.5
+
+
+# REMARKS OF THE PROFESSOR FOR THE ASSIGNMENT   
 
 ### Introduction
 
