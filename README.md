@@ -4,6 +4,7 @@
 
 	
 	# create a *square* matrix (necessary as `solve` only works with square matrices)
+	# once again an important remark, we assume that the code will use only invertible matrices!
 	A <- makeCacheMatrix( matrix(c(1,2,3,4), nrow = 2, ncol = 2) )
 
 	summary(A)
@@ -13,19 +14,19 @@
 	#> cacheInverse 1      -none- function
 	#> getInverse   1      -none- function
 
-	A$getMatrix()
+	A$getMatrix(A)
 	#>      [,1] [,2]
 	#> [1,]    1   3
 	#> [2,]    2   4
 
-	cacheSolve(a)
+	cacheSolve(A)
 	#>     [,1] [,2]
 	#> [1,] -2  1.5
 	#> [2,]  1 -0.5
 
 	# Note that if we run the function another time, we get the cached value as expected
 	
-	cacheSolve(a)
+	cacheSolve(A)
 	#> getting cached data
 	#>     [,1] [,2]
 	#> [1,] -2  1.5
