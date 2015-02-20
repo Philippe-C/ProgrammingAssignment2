@@ -1,3 +1,29 @@
+############################################## OUPUT OF THE ASSIGNMENT ######################################################
+######### THIS IS WHAT YOU SHOULD OBSERVE AFTER RUNNING CacheMatrixAssignment2.R AND USING THE VARIOUS FUNCTIONS! ###########
+> A <-makeCacheMatrix( matrix(c(1,2,3,4), nrow = 2, ncol = 2) ) # CREATES A SIMPLE ORDER 2 MATRIX
+> summary(A)
+             Length Class  Mode    
+setMatrix    1      -none- function
+getMatrix    1      -none- function
+cacheInverse 1      -none- function
+getInverse   1      -none- function
+> A$getMatrix()
+     [,1] [,2]
+[1,]    1    3
+[2,]    2    4
+> cacheSolve(A)
+     [,1] [,2]
+[1,]   -2  1.5
+[2,]    1 -0.5
+> cacheSolve(A)
+getting cached data
+     [,1] [,2]
+[1,]   -2  1.5
+[2,]    1 -0.5
+
+###############################################################################################################################
+##########################           REMARKS OF THE PROFESSOR FOR THE ASSIGNMENT                  #############################
+###############################################################################################################################
 ### Introduction
 
 This second programming assignment will require you to write an R
