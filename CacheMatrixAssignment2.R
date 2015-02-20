@@ -1,7 +1,7 @@
 ################################## REMARKS ############################################
 # Output from the code are presented in README.md (even if not asked for this assignment!) 
 # Because it makes the code easier to understand
-# From a mathematical perspective, the simpliest squared matrix is of order 2 (2 rows and 2 columns)
+# From a mathematical perspective, the simpliest square matrix is of order 2 (2 rows and 2 columns)
 # If this matrix is given by: A=(a b ; c d) then the inverse A^(-1)=1/DET(A) * (d -b; -c a)
 # With DET(A)= a*d - b*c, DET(A) must be different of zero! 
 # So a matrix (1 1; 1 1) will create an error! don't try such a matrix with this specific code...
@@ -13,10 +13,10 @@
 # makeCacheMatrix function returns a list of functions
 # It allows to store a numeric matrix and a cached value of the inverse of the matrix
 # It includes the following functions:
-# * setMatrix      set the value of a matrix
-# * getMatrix      get the value of a matrix
-# * cacheInverse   get the cached value (inverse of the matrix)
-# * getInverse     get the cached value (inverse of the matrix)
+# setMatrix      set the value of a matrix
+# getMatrix      get the value of a matrix
+# cacheInverse   get the cached value (inverse of the matrix)
+# getInverse     get the cached value (inverse of the matrix)
 
 # makeCacheMatrix function
 makeCacheMatrix <- function(x = numeric()) {
